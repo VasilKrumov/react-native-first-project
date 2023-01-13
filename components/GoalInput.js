@@ -15,7 +15,12 @@ export default function GoalInput({ addGoal }) {
 
     return (
         <View style={styles.inputContainer}>
-            <TextInput placeholder="Your course goal!" style={styles.textInput} onChangeText={goalInputHandler} />
+            <TextInput
+                value={enteredGoalText}
+                placeholder="Your course goal!"
+                style={styles.textInput}
+                onChangeText={goalInputHandler}
+            />
             <Button title="Add goal" onPress={addGoalHandler} />
         </View>
     )
